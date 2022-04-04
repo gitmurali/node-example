@@ -1,0 +1,22 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "a simple node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "headless": "npx cypress run",
+    "prashanthi": "cypress open",
+    "serve": "serve intro"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "cypress": "^9.5.3"
+  }
+}
