@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "murali-reddit-cli": "^2.0.0",
     "node-fetch": "^3.2.3",
     "open": "^8.4.0",
     "yargs": "^17.4.0"
