@@ -1,12 +1,15 @@
-process.env.UV_THREADPOOL_SIZE = 5;
+process.env.UV_THREADPOOL_SIZE = 1; // 1 cluster child has 1 thread
 const cluster = require("cluster");
 
 if (cluster.isMaster) {
   //execute index.js again in child mode.
+  //max children is the amount of max cores cpu you have.
+  cluster.fork(); // 1 child
   cluster.fork();
-  //   cluster.fork();
-  //   cluster.fork();
-  //   cluster.fork();
+  cluster.fork();
+  cluster.fork();
+  cluster.fork();
+  cluster.fork();
 } else {
   //child act like a server and do nothing else
   const express = require("express");
