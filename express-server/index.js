@@ -16,7 +16,12 @@ if (cluster.isMaster) {
     while (Date.now() - start < duration) {}
   }
 
-  app.use("/", (req, res) => {
+  //if cluster is not enabled this would have taken more time as the / request will take 5s
+  app.get("/fast", (req, res) => {
+    res.send("cluster mode...");
+  });
+
+  app.get("/", (req, res) => {
     doWork(5000);
     res.send("hi there");
   });
